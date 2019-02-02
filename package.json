@@ -1,0 +1,26 @@
+{
+  "name": "rollup-plugin-dss",
+  "version": "0.1.0-beta.0",
+  "author": "Johan Holmerin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:johanholmerin/rollup-plugin-dss.git"
+  },
+  "peerDependencies": {
+    "rollup": ">=0.60.0 <2"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "mocha": "^5.2.0",
+    "rollup": ">=0.60.0 <2"
+  },
+  "dependencies": {
+    "dss-compiler": "^0.1.0-beta.0",
+    "rollup-pluginutils": "^2.3.3"
+  },
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint {*.js,test/**/*.js}"
+  }
+}
