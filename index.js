@@ -47,12 +47,7 @@ module.exports = function dssPlugin({
         this.error(`${fileName} already exists in bundle`);
       }
 
-      // Add to bundle. Makes it available regardless of writing or not
-      bundles[fileName] = {
-        fileName,
-        source: optimizer(css).css,
-        isAsset: true
-      };
+      this.emitAsset(fileName, optimizer(css).css);
     }
   };
 };
