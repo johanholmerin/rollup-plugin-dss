@@ -7,7 +7,7 @@ Rollup plugin for [DSS](https://dss-lang.com)
 ## Installation
 
 ```sh
-yarn add -D git+https://github.com/johanholmerin/rollup-plugin-dss#semver:^0.1.0-beta.0
+yarn add -D git+https://github.com/johanholmerin/rollup-plugin-dss#semver:^0.1.0-beta.1
 ```
 
 ## Usage
