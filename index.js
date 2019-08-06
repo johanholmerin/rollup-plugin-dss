@@ -1,14 +1,16 @@
 const dss = require('dss-compiler');
-const assert = require('assert');
 const { createFilter } = require('rollup-pluginutils');
 const { optimizer } = require('dss-compiler/processor');
 
 module.exports = function dssPlugin({
   include = '**/*.css',
   exclude,
-  fileName
+  fileName,
+  name
 } = {}) {
-  assert(fileName, 'fileName is required');
+  // Default name required to ensure extension
+  if (!fileName && !name) name = 'index.css';
+
   const filter = createFilter(include, exclude);
   const styles = Object.create(null);
 
@@ -43,16 +45,11 @@ module.exports = function dssPlugin({
         }
       }
 
-      if (fileName in bundles) {
-        this.error(`${fileName} already exists in bundle`);
-      }
-
-      // Add to bundle. Makes it available regardless of writing or not
-      bundles[fileName] = {
-        fileName,
+      this.emitFile({
+        type: 'asset',
         source: optimizer(css).css,
-        isAsset: true
-      };
+        fileName, name
+      });
     }
   };
 };

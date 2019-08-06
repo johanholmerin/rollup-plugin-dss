@@ -8,12 +8,12 @@
     "url": "git@github.com:johanholmerin/rollup-plugin-dss.git"
   },
   "peerDependencies": {
-    "rollup": ">=0.60.0 <2"
+    "rollup": "^1.19.0"
   },
   "devDependencies": {
     "eslint": "^5.12.0",
     "mocha": "^5.2.0",
-    "rollup": ">=0.60.0 <2"
+    "rollup": "^1.19.0"
   },
   "dependencies": {
     "dss-compiler": "^0.1.0-beta.0",

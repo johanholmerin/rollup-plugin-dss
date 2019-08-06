@@ -7,7 +7,7 @@ describe('exports', function() {
     return bundle('./samples/reexport/index.js', {
       fileName: 'index.css'
     }).then(([output]) => {
-      assert.deepEqual(output.exports, ['default', 'foo', 'bar']);
+      assert.deepEqual(output.exports, ['bar', 'default', 'foo']);
     });
   });
 

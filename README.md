@@ -2,6 +2,8 @@
 
 Rollup plugin for [DSS](https://dss-lang.com)
 
+**Rollup version 1.19.0 or higher is required**
+
 ## Installation
 
 ```sh
@@ -23,7 +25,9 @@ export default {
   },
   plugins: [
     dss({
-      fileName: 'index.css' // required, relative to output location
+      // Optional options
+      // fileName: unique name to for output file
+      // name: name to use for output.assetFileNames pattern
     })
   ]
 };
